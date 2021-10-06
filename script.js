@@ -29,3 +29,10 @@ const checkNum = () => {
     ).innerHTML = `${inputNum} not in range!!! Pick between 1 and 20`;
   }
 };
+
+const resetGame = () => {
+  document.querySelector(".guess").value = "";
+  document.querySelector(".message").innerHTML = "Start guessing...";
+  document.querySelector(".score").innerHTML = 20;
+  numToGuess = Math.floor(Math.random() * 20) + 1;
+};
