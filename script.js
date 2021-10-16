@@ -10,6 +10,9 @@ const checkNum = () => {
       document.querySelector(
         ".message"
       ).innerHTML = `You guessed correct!!✅✅`;
+      document.querySelector("body").style.backgroundColor = "green";
+      document.querySelector(".number").style.width = "30rem";
+      document.querySelector(".number").textContent = numToGuess;
       score > highScore
         ? (document.querySelector(".highscore").innerHTML = score)
         : null;
@@ -34,5 +37,8 @@ const resetGame = () => {
   document.querySelector(".guess").value = "";
   document.querySelector(".message").innerHTML = "Start guessing...";
   document.querySelector(".score").innerHTML = 20;
+  document.querySelector("body").style.backgroundColor = "#222";
+  document.querySelector(".number").style.width = "15rem";
+  document.querySelector(".number").textContent = "?";
   numToGuess = Math.floor(Math.random() * 20) + 1;
 };
